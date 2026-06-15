@@ -14,8 +14,8 @@
   --mocha-dark: #321019;   /* deepest burgundy */
   --rose:       #b6917f;   /* dusty rose accent */
   --rose-soft:  #d8bcab;   /* soft rose */
-  --ink:        #3c2e24;   /* espresso text */
-  --ink-soft:   #7c6a5b;   /* secondary text */
+  --ink:        #34281f;   /* espresso text */
+  --ink-soft:   #5b4d40;   /* secondary text (darkened for readability) */
   --line:       #ddccb8;   /* hairline */
 
   --shadow-sm: 0 6px 18px rgba(60, 46, 36, 0.08);
@@ -32,13 +32,13 @@
 
 /* ---------- RESET ---------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; font-size: 17.5px; }
 body {
   font-family: var(--sans);
-  font-weight: 300;
+  font-weight: 400;
   color: var(--ink);
   background: var(--cream);
-  line-height: 1.75;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
@@ -270,7 +270,7 @@ p { color: var(--ink-soft); }
   color: var(--cream);
   margin-bottom: 8px;
 }
-.why__item p { color: rgba(244, 236, 221, 0.78); font-size: 0.92rem; }
+.why__item p { color: rgba(244, 236, 221, 0.9); font-size: 1rem; }
 
 /* ============================================================
    PREVIOUS WORK  (phone mockups)
@@ -302,8 +302,8 @@ p { color: var(--ink-soft); }
 .phone-item { display: flex; flex-direction: column; align-items: center; width: 100%; }
 .phone-item figcaption {
   margin-top: 16px;
-  font-size: 0.68rem;
-  letter-spacing: 0.16em;
+  font-size: 0.82rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--ink-soft);
   text-align: center;
@@ -436,7 +436,7 @@ p { color: var(--ink-soft); }
 .contact .script { color: var(--rose-soft); }
 .contact__inner { max-width: 680px; margin: 0 auto; }
 .contact .display { color: var(--cream); margin: 6px 0 18px; }
-.contact__text { color: rgba(244, 236, 221, 0.82); font-size: 1.02rem; margin-bottom: 32px; }
+.contact__text { color: rgba(244, 236, 221, 0.92); font-size: 1.05rem; margin-bottom: 32px; }
 .contact__links { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; }
 .contact__links .btn--solid { background: var(--cream); color: var(--mocha); }
 .contact__links .btn--solid:hover { background: var(--rose-soft); }
