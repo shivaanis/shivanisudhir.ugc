@@ -145,6 +145,7 @@ p { color: var(--ink-soft); }
 }
 .ph__sound:hover { background: rgba(0, 0, 0, 0.7); transform: scale(1.08); }
 .ph__hint {
+  display: none;   /* placeholder label — hidden now that slots are filled */
   font-size: 0.66rem; letter-spacing: 0.18em; text-transform: uppercase;
   color: var(--ink-soft); z-index: 0; text-align: center; padding: 0 8px;
 }
