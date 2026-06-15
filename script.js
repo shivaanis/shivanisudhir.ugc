@@ -77,7 +77,33 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     }, { threshold: 0.4 });
-    videos.forEach(function (v) { vObserver.observe(v); });
+    videos.forEach(function (v) {
+      vObserver.observe(v);
+
+      // Tap-to-unmute button (reels autoplay muted; click for sound)
+      const btn = document.createElement("button");
+      btn.className = "ph__sound";
+      btn.type = "button";
+      btn.setAttribute("aria-label", "Toggle sound");
+      btn.textContent = "🔇";
+      v.parentNode.appendChild(btn);
+
+      btn.addEventListener("click", function (e) {
+        e.stopPropagation();
+        if (v.muted) {
+          // Only one reel plays sound at a time
+          videos.forEach(function (other) { if (other !== v) { other.muted = true; } });
+          document.querySelectorAll(".ph__sound").forEach(function (b) { b.textContent = "🔇"; });
+          v.muted = false;
+          const p = v.play();
+          if (p) { p.catch(function () {}); }
+          btn.textContent = "🔊";
+        } else {
+          v.muted = true;
+          btn.textContent = "🔇";
+        }
+      });
+    });
   }
 
   /* ---------- 5. Auto-update footer year ---------- */
