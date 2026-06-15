@@ -236,8 +236,8 @@ p { color: var(--ink-soft); }
 /* Tall arch frame — shows the whole portrait, no cropping */
 .ph--portrait {
   position: relative; z-index: 1;
-  width: 80%;
-  max-width: 360px;
+  width: 100%;
+  max-width: 270px;
   aspect-ratio: 9 / 16;
   border-radius: 999px 999px 14px 14px;
 }
@@ -454,7 +454,7 @@ p { color: var(--ink-soft); }
    RESPONSIVE — TABLET
    ============================================================ */
 @media (min-width: 720px) {
-  .about__inner   { grid-template-columns: 1.05fr 0.95fr; gap: 64px; }
+  .about__inner   { grid-template-columns: 1.6fr 1fr; gap: 56px; }
   .why__grid      { grid-template-columns: repeat(2, 1fr); }
   .featured__grid { grid-template-columns: repeat(3, 1fr); gap: 26px; }
   .work__grid     { grid-template-columns: repeat(4, 1fr); gap: 34px 22px; }
