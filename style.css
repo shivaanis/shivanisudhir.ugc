@@ -229,11 +229,37 @@ p { color: var(--ink-soft); }
    3. PREVIOUS WORK  (phone mockups)
    ============================================================ */
 .work { background: var(--cream); }
+.work__group {
+  text-align: center;
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  color: var(--ink);
+  letter-spacing: 0.02em;
+  margin: 60px 0 32px;
+}
+.work__group:first-of-type { margin-top: 0; }
+.work__group::after {
+  content: "";
+  display: block;
+  width: 40px; height: 1px;
+  background: var(--rose);
+  margin: 12px auto 0;
+}
 .work__grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 40px;
   justify-items: center;
+}
+.phone-item { display: flex; flex-direction: column; align-items: center; width: 100%; }
+.phone-item figcaption {
+  margin-top: 16px;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  text-align: center;
 }
 .phone {
   width: 100%;
