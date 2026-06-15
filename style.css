@@ -229,6 +229,7 @@ p { color: var(--ink-soft); }
   aspect-ratio: 1;
   border-radius: 50%;
 }
+.ph--circle img { object-position: 50% 15%; }
 
 /* ============================================================
    3. FEATURED  (chocolate block)
