@@ -239,6 +239,16 @@ p { color: var(--ink-soft); }
 .placeholder--portrait { aspect-ratio: 4 / 5; }
 .placeholder--reel     { aspect-ratio: 9 / 16; }
 
+/* Hero photo — fills the same portrait frame as the placeholder */
+.hero__photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: 50% 16%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+}
+
 /* ---------- ABOUT ---------- */
 .about { background: var(--white); }
 .about__inner {
