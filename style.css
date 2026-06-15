@@ -226,7 +226,41 @@ p { color: var(--ink-soft); }
 .ph--portrait img { object-fit: cover; }
 
 /* ============================================================
-   3. PREVIOUS WORK  (phone mockups)
+   WHY UGC  (burgundy block)
+   ============================================================ */
+.why { background: var(--mocha); }
+.why .section__head .script { color: var(--rose-soft); }
+.why__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+.why__item {
+  padding: 32px 30px;
+  border: 1px solid rgba(244, 236, 221, 0.16);
+  border-radius: var(--radius);
+  background: rgba(244, 236, 221, 0.04);
+  transition: transform .4s var(--ease), background .4s var(--ease);
+}
+.why__item:hover { transform: translateY(-5px); background: rgba(244, 236, 221, 0.08); }
+.why__num {
+  display: block;
+  font-family: var(--serif);
+  font-size: 1.7rem;
+  color: var(--rose-soft);
+  margin-bottom: 10px;
+}
+.why__item h3 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.35rem;
+  color: var(--cream);
+  margin-bottom: 8px;
+}
+.why__item p { color: rgba(244, 236, 221, 0.78); font-size: 0.92rem; }
+
+/* ============================================================
+   PREVIOUS WORK  (phone mockups)
    ============================================================ */
 .work { background: var(--cream); }
 .work__group {
@@ -403,6 +437,7 @@ p { color: var(--ink-soft); }
    ============================================================ */
 @media (min-width: 720px) {
   .about__inner   { grid-template-columns: 1.05fr 0.95fr; gap: 64px; }
+  .why__grid      { grid-template-columns: repeat(2, 1fr); }
   .featured__grid { grid-template-columns: repeat(3, 1fr); gap: 26px; }
   .work__grid     { grid-template-columns: repeat(3, 1fr); }
   .process__steps { grid-template-columns: repeat(3, 1fr); }
