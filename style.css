@@ -8,28 +8,33 @@
    ============================================================ */
 
 /* ---------- DESIGN TOKENS (edit colors here) ----------
-   Retro / 70s warm palette: ivory, terracotta, gold, olive, espresso.
+   Soft, airy, feminine: cream paper + pastel watercolour accents.
    ------------------------------------------------------ */
 :root {
-  --cream:      #f4e9d6;   /* warm ivory page background */
-  --beige:      #ecdcc2;   /* soft sections */
-  --taupe:      #d9bd95;   /* borders, accents */
-  --sand:       #cf9a58;   /* hover accent */
-  --brown:      #b35a32;   /* terracotta — primary buttons/accents */
-  --brown-dark: #8c4322;   /* deep rust — hover */
-  --ink:        #43291b;   /* espresso text */
-  --ink-soft:   #8a6850;   /* secondary text */
-  --white:      #fbf3e6;   /* warm off-white (cards) */
-  --mustard:    #cf9233;   /* retro gold accent */
-  --olive:      #6f7440;   /* retro olive accent */
+  --cream:      #faf6ef;   /* warm paper background */
+  --beige:      #f3ece1;   /* soft sections */
+  --taupe:      #e4d8c8;   /* borders */
+  --sand:       #cbb49a;   /* hover accent */
+  --brown:      #ab8c70;   /* muted taupe-brown — primary buttons */
+  --brown-dark: #8a6c52;   /* hover */
+  --ink:        #4a4039;   /* soft charcoal-brown text */
+  --ink-soft:   #8c8073;   /* secondary text */
+  --white:      #ffffff;
 
-  --shadow-sm: 0 4px 14px rgba(140, 67, 34, 0.10);
-  --shadow-md: 0 14px 34px rgba(140, 67, 34, 0.16);
+  /* Watercolour accents */
+  --blush:      #f3d9d6;   /* soft pink */
+  --peach:      #f7e2cf;   /* soft peach */
+  --sage:       #dbe3d2;   /* soft sage green */
+  --gold:       #c9a86a;   /* delicate gold */
+
+  --shadow-sm: 0 6px 20px rgba(74, 64, 57, 0.07);
+  --shadow-md: 0 18px 40px rgba(74, 64, 57, 0.10);
   --radius:    18px;
   --radius-sm: 12px;
 
-  --serif: "Fraunces", Georgia, "Times New Roman", serif;
-  --sans:  "Jost", -apple-system, BlinkMacSystemFont, sans-serif;
+  --script: "Pinyon Script", cursive;
+  --serif:  "Cormorant Garamond", Georgia, serif;
+  --sans:   "Jost", -apple-system, BlinkMacSystemFont, sans-serif;
 
   --max:   1140px;
   --ease:  cubic-bezier(0.22, 1, 0.36, 1);
@@ -179,46 +184,73 @@ p { color: var(--ink-soft); }
 
 /* ---------- HERO ---------- */
 .hero {
+  position: relative;
   padding: 140px 0 90px;
-  background:
-    radial-gradient(1200px 500px at 75% -10%, var(--beige), transparent 60%),
-    var(--cream);
+  overflow: hidden;
 }
 .hero__inner {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: 1fr;
   gap: 48px;
   align-items: center;
 }
-.hero__eyebrow {
-  font-size: 0.8rem;
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--brown);
-  margin-bottom: 18px;
-}
 .hero__name {
-  font-family: var(--serif);
-  font-weight: 600;
-  font-size: clamp(2.8rem, 9vw, 5rem);
-  line-height: 1.02;
+  font-family: var(--script);
+  font-weight: 400;
+  font-size: clamp(3.4rem, 11vw, 6rem);
+  line-height: 1.0;
   color: var(--ink);
 }
-.hero__location {
-  margin: 14px 0 8px;
-  font-size: 0.95rem;
+.hero__eyebrow {
+  margin-top: 6px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
   color: var(--ink-soft);
-  letter-spacing: 0.03em;
 }
+.hero__niches {
+  margin-top: 12px;
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--brown);
+}
+.hero__socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 22px 0 6px;
+}
+.hero__socials a {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  padding: 8px 16px;
+  border: 1px solid var(--taupe);
+  border-radius: 50px;
+  transition: color .3s var(--ease), border-color .3s var(--ease), background .3s var(--ease);
+}
+.hero__socials a:hover { color: var(--brown-dark); border-color: var(--sand); background: var(--beige); }
 .hero__tagline {
   font-family: var(--serif);
   font-style: italic;
-  font-size: clamp(1.25rem, 3vw, 1.6rem);
+  font-size: clamp(1.25rem, 3vw, 1.55rem);
   color: var(--ink);
-  max-width: 480px;
-  margin: 18px 0 32px;
-  line-height: 1.4;
+  max-width: 460px;
+  margin: 24px 0 8px;
+  line-height: 1.45;
+}
+.hero__location {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  letter-spacing: 0.02em;
+  margin-bottom: 30px;
 }
 .hero__cta { display: flex; flex-wrap: wrap; gap: 16px; }
 
@@ -406,37 +438,43 @@ p { color: var(--ink-soft); }
 .work:hover figcaption strong { color: var(--white); }
 .work:hover figcaption span { color: var(--taupe); }
 
-/* ---------- VALUE / HIGHLIGHTS BAND ---------- */
+/* ---------- VALUE / HIGHLIGHTS STRIP ---------- */
 .value {
-  background: var(--brown);
-  color: var(--cream);
-  padding: 30px 0;
+  background: var(--white);
+  padding: 50px 0;
+  border-top: 1px solid var(--taupe);
+  border-bottom: 1px solid var(--taupe);
 }
 .value__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 22px 16px;
+  gap: 30px 16px;
 }
-.value__item { display: flex; align-items: center; gap: 12px; }
-.value__icon { font-size: 1.5rem; line-height: 1; }
-.value__item p {
-  color: var(--cream);
-  font-size: 0.86rem;
-  line-height: 1.35;
-  letter-spacing: 0.02em;
-}
-
-/* ---------- HERO CHIPS ---------- */
-.hero__chips {
+.value__item {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px 20px;
-  margin-top: 30px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
 }
-.hero__chips li {
+.value__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  line-height: 1;
+  background: radial-gradient(circle at 38% 32%, var(--blush), var(--peach) 78%);
+}
+.value__item:nth-child(3n+2) .value__icon { background: radial-gradient(circle at 38% 32%, var(--sage), var(--peach) 80%); }
+.value__item:nth-child(3n)   .value__icon { background: radial-gradient(circle at 38% 32%, var(--peach), var(--blush) 80%); }
+.value__item p {
+  color: var(--ink-soft);
   font-size: 0.82rem;
-  letter-spacing: 0.03em;
-  color: var(--brown-dark);
+  line-height: 1.4;
+  letter-spacing: 0.02em;
 }
 
 /* ---------- MID-PAGE CTA BAND ---------- */
@@ -613,87 +651,66 @@ p { color: var(--ink-soft); }
 .reveal.visible { opacity: 1; transform: none; }
 
 /* ============================================================
-   RETRO ENHANCEMENTS
+   WATERCOLOUR ACCENTS + HERO PHOTO
    ============================================================ */
 
-/* Subtle film-grain texture over the whole page */
-body::before {
+/* Soft watercolour washes in the hero corners */
+.hero::before {
   content: "";
-  position: fixed;
+  position: absolute;
   inset: 0;
-  z-index: 9999;
+  z-index: 0;
   pointer-events: none;
-  opacity: 0.05;
-  mix-blend-mode: multiply;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-}
-
-/* Retro asterisk before section labels */
-.eyebrow::before,
-.hero__eyebrow::before {
-  content: "✶ ";
-  color: var(--mustard);
-}
-
-/* Warm up the hero glow with a retro radial wash */
-.hero {
   background:
-    radial-gradient(1100px 480px at 80% -10%, rgba(207, 146, 51, 0.20), transparent 60%),
-    radial-gradient(800px 420px at 0% 110%, rgba(179, 90, 50, 0.12), transparent 55%),
-    var(--cream);
+    radial-gradient(340px 300px at 6% 4%,  var(--blush), transparent 70%),
+    radial-gradient(300px 280px at 98% 8%, var(--peach), transparent 70%),
+    radial-gradient(360px 320px at 92% 98%, var(--sage),  transparent 72%),
+    radial-gradient(280px 260px at 2% 96%, var(--peach), transparent 72%);
+  opacity: 0.75;
+  filter: blur(8px);
 }
 
-/* ---------- HERO PHOTO — retro arched frame ---------- */
+/* ---------- HERO PHOTO — clean, fully visible ---------- */
+.hero__image { position: relative; }
+/* Soft watercolour blob peeking behind the photo */
+.hero__image::before {
+  content: "";
+  position: absolute;
+  inset: -18px -18px auto -18px;
+  height: 70%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 60% 40%, var(--blush), var(--peach) 70%, transparent 100%);
+  filter: blur(26px);
+  opacity: 0.7;
+  z-index: 0;
+}
 .hero__frame {
   position: relative;
+  z-index: 1;
   aspect-ratio: 4 / 5;
   width: 100%;
-  /* Arched top — classic 70s shape */
-  border-radius: 50% 50% var(--radius) var(--radius) / 32% 32% var(--radius) var(--radius);
+  /* Gentle arched top — soft and elegant */
+  border-radius: 160px 160px var(--radius) var(--radius);
   overflow: hidden;
-  border: 3px solid var(--mustard);
-  box-shadow: 0 20px 44px rgba(140, 67, 34, 0.26);
-  background:
-    repeating-linear-gradient(45deg, var(--beige), var(--beige) 14px, #e4d2b2 14px, #e4d2b2 28px);
+  background: var(--beige);
+  border: 6px solid var(--white);
+  box-shadow: var(--shadow-md);
 }
 .hero__frame img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 22%;
-  /* Vintage colour grade */
-  filter: saturate(0.94) contrast(1.03) sepia(0.14) brightness(1.02);
+  object-position: 50% 16%;   /* keep the face nicely framed */
+  /* Bright & true to the photo — only the lightest warm lift */
+  filter: saturate(1.02) contrast(1.01) brightness(1.02);
 }
-/* Warm retro wash over the photo */
-.hero__frame::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(207, 146, 51, 0.14), rgba(179, 90, 50, 0.20));
-  mix-blend-mode: multiply;
-  pointer-events: none;
-}
-/* Gold corner badge */
-.hero__badge {
-  position: absolute;
-  left: 16px;
-  bottom: 16px;
-  z-index: 2;
-  font-size: 0.7rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--brown-dark);
-  background: var(--cream);
-  padding: 7px 15px;
-  border-radius: 50px;
-  border: 1.5px solid var(--mustard);
-}
-/* Fallback shown until assets/images/hero.jpg exists */
+/* Fallback shown only if assets/images/hero.jpg is missing */
 .hero__frame.is-empty {
   display: flex;
   align-items: center;
   justify-content: center;
   border-style: dashed;
+  border-color: var(--taupe);
 }
 .hero__frame.is-empty::before {
   content: "Save your photo as\A assets/images/hero.jpg";
@@ -701,8 +718,11 @@ body::before {
   text-align: center;
   font-size: 0.85rem;
   line-height: 1.6;
-  color: var(--brown-dark);
+  color: var(--ink-soft);
 }
+
+/* Watercolour corner accents on light section heads */
+.section__head { position: relative; }
 
 /* ============================================================
    RESPONSIVE — TABLET

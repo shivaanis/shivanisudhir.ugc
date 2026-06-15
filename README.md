@@ -8,9 +8,9 @@ Built with **HTML, CSS, and JavaScript only** — no backend, no frameworks, no 
 
 ## ✨ Features
 
-- Warm **retro / vintage** aesthetic — ivory, terracotta, gold & olive, with a subtle film-grain texture
-- Vintage-inspired serif headings (Fraunces) + clean sans body (Jost)
-- Retro arched hero photo frame with a gold badge
+- Soft, airy, feminine aesthetic — cream paper with pastel watercolour accents (blush / peach / sage)
+- Signature script name (Pinyon Script) + elegant serif (Cormorant Garamond) + clean sans body (Jost)
+- Clean arched hero photo frame that shows your cover photo large and clear
 - Fully responsive — mobile, tablet, and desktop
 - Smooth scrolling + subtle hover & scroll-reveal animations
 - Mobile hamburger menu

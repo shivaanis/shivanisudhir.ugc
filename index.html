@@ -16,10 +16,10 @@
   <meta property="og:image" content="assets/images/og-preview.jpg" />
   <meta property="og:type" content="website" />
 
-  <!-- Google Fonts: Fraunces (retro/vintage serif headings) + Jost (clean sans body) -->
+  <!-- Google Fonts: Pinyon Script (signature) + Cormorant Garamond (elegant serif) + Jost (sans body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -54,33 +54,32 @@
   <section class="hero" id="hero">
     <div class="container hero__inner">
       <div class="hero__text">
-        <p class="hero__eyebrow">UGC Creator &nbsp;•&nbsp; Lifestyle Content Creator</p>
         <h1 class="hero__name">Shivani Sudhir</h1>
-        <p class="hero__location">📍 Sydney, Australia</p>
-        <p class="hero__tagline">
-          Aesthetic lifestyle content that helps brands feel
-          real, warm, and trustworthy.
-        </p>
+        <p class="hero__eyebrow">UGC Creator &nbsp;·&nbsp; Lifestyle Content Creator</p>
+        <p class="hero__niches">Beauty &nbsp;|&nbsp; Lifestyle &nbsp;|&nbsp; Home &nbsp;|&nbsp; Travel</p>
+
+        <!-- Social icons — update the links here and in the Contact section -->
+        <div class="hero__socials">
+          <a href="https://instagram.com/shivaanisudhir" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+          <a href="#" aria-label="TikTok">TikTok</a>
+          <a href="mailto:shivaanisudhir@gmail.com" aria-label="Email">Email</a>
+        </div>
+
+        <p class="hero__tagline">Aesthetic lifestyle content that helps brands feel real, warm, and trustworthy.</p>
+        <p class="hero__location">📍 Sydney, Australia · working with brands worldwide</p>
+
         <div class="hero__cta">
           <a href="#contact" class="btn btn--solid">Work With Me</a>
           <a href="#portfolio" class="btn btn--ghost">View Portfolio</a>
         </div>
-
-        <ul class="hero__chips">
-          <li>✦ Scroll-stopping UGC</li>
-          <li>✦ Natural, aesthetic style</li>
-          <li>✦ Full usage rights</li>
-        </ul>
       </div>
 
       <!-- COVER IMAGE: save your photo as assets/images/hero.jpg
-           (recommended ~1000x1250px portrait). The onerror fallback
-           shows a styled placeholder until the file is added. -->
+           The onerror fallback shows a placeholder until the file is added. -->
       <div class="hero__image">
         <div class="hero__frame">
           <img src="assets/images/hero.jpg" alt="Shivani Sudhir"
                onerror="this.remove(); this.parentNode.classList.add('is-empty')" />
-          <span class="hero__badge">Sydney ✶ UGC Creator</span>
         </div>
       </div>
     </div>
