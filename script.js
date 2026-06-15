@@ -41,7 +41,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // then IntersectionObserver toggles .visible when it enters view.
   const revealTargets = document.querySelectorAll(
     ".section__head, .hero__text, .hero__image, .about__image, .about__text, " +
-    ".why__card, .work, .service, .process__step, .package, .contact__inner"
+    ".why__card, .work, .service, .process__step, .package, " +
+    ".value__item, .cta-band__inner, .contact__inner"
   );
 
   revealTargets.forEach(function (el) { el.classList.add("reveal"); });
@@ -62,7 +63,31 @@ document.addEventListener("DOMContentLoaded", function () {
     revealTargets.forEach(function (el) { el.classList.add("visible"); });
   }
 
-  /* ---------- 4. Auto-update footer year ---------- */
+  /* ---------- 4. Portfolio category filter ---------- */
+  const filterBar = document.getElementById("filters");
+  const workItems = document.querySelectorAll("#portfolioGrid .work");
+
+  if (filterBar) {
+    filterBar.addEventListener("click", function (e) {
+      const btn = e.target.closest(".filter");
+      if (!btn) return;
+
+      // Highlight the active tab
+      filterBar.querySelectorAll(".filter").forEach(function (b) {
+        b.classList.remove("is-active");
+      });
+      btn.classList.add("is-active");
+
+      // Show/hide cards by category
+      const filter = btn.getAttribute("data-filter");
+      workItems.forEach(function (item) {
+        const match = filter === "all" || item.getAttribute("data-category") === filter;
+        item.classList.toggle("is-hidden", !match);
+      });
+    });
+  }
+
+  /* ---------- 5. Auto-update footer year ---------- */
   const yearSpan = document.getElementById("year");
   if (yearSpan) { yearSpan.textContent = new Date().getFullYear(); }
 

@@ -13,7 +13,9 @@ Built with **HTML, CSS, and JavaScript only** — no backend, no frameworks, no 
 - Fully responsive — mobile, tablet, and desktop
 - Smooth scrolling + subtle hover & scroll-reveal animations
 - Mobile hamburger menu
-- All sections: Hero, About, Why UGC, Portfolio, Services, Process, Packages, Contact
+- **Filterable portfolio gallery** with category tabs (Lifestyle & Home, Fashion, Travel, Beauty, Motherhood, Food)
+- Conversion-focused layout: trust chips, value/benefits band, and a mid-page call-to-action
+- All sections: Hero, Highlights, About, Why UGC, Portfolio, Services, Process, Packages, Contact
 - Clearly commented placeholders so you know exactly where to add your photos, videos, and links
 
 ---
@@ -86,27 +88,35 @@ Use `.jpg` for photos (smaller files) and keep each image under ~500KB for fast 
 
 ## 🎬 Adding your portfolio videos
 
+The portfolio is a **filterable gallery** with tabs: *Lifestyle & Home, Fashion, Travel, Beauty & Skincare, Motherhood & Family, Food & Kitchen*. Each card belongs to a category via `data-category`.
+
 Put your `.mp4` files in `assets/videos/`. In `index.html`, find a portfolio card:
 
 ```html
-<figure class="work">
-  <div class="placeholder placeholder--reel"><span>Product unboxing<br />9:16 reel</span></div>
-  <figcaption>Product Unboxing</figcaption>
+<figure class="work" data-category="lifestyle">
+  <div class="work__media placeholder placeholder--reel">
+    <span class="work__play">▶</span>
+    <span class="work__hint">Add reel · 9:16</span>
+  </div>
+  <figcaption><strong>Morning Routine</strong><span>Lifestyle &amp; Home</span></figcaption>
 </figure>
 ```
 
-**Option A — self-hosted video** (replace the `.placeholder` div):
+**Option A — self-hosted video** (replace the inner `<div class="work__media …">` block):
 
 ```html
-<figure class="work">
-  <video class="placeholder--reel" controls muted playsinline poster="assets/images/unboxing-cover.jpg">
-    <source src="assets/videos/unboxing.mp4" type="video/mp4" />
-  </video>
-  <figcaption>Product Unboxing</figcaption>
-</figure>
+<video class="work__media" controls muted playsinline poster="assets/images/cover.jpg">
+  <source src="assets/videos/your-clip.mp4" type="video/mp4" />
+</video>
 ```
 
-**Option B — embed from Instagram/TikTok/YouTube:** paste their embed `<iframe>` code in place of the `.placeholder` div.
+**Option B — embed from Instagram/TikTok/YouTube:** paste their `<iframe>` embed code in place of that same `<div class="work__media …">` block.
+
+**To add more work:** copy a whole `<figure class="work" …>` block and set its `data-category` to one of:
+`lifestyle` · `fashion` · `travel` · `beauty` · `motherhood` · `food`
+(it must match a filter button's `data-filter` so the tab shows it).
+
+**To add or remove a category:** edit the `<div class="filters">` buttons near the top of the portfolio section — each `data-filter` value pairs with the cards' `data-category`.
 
 > Tip: keep self-hosted videos short and compressed. For longer reels, embedding from Instagram/TikTok keeps your repo light and loads faster.
 
