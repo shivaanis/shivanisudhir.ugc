@@ -8,15 +8,12 @@ Built with **HTML, CSS, and JavaScript only** — no backend, no frameworks, no 
 
 ## ✨ Features
 
-- Soft, airy, feminine aesthetic — cream paper with pastel watercolour accents (blush / peach / sage)
-- Signature script name (Pinyon Script) + elegant serif (Cormorant Garamond) + clean sans body (Jost)
-- Clean arched hero photo frame that shows your cover photo large and clear
+- Warm, premium, Pinterest-style design (cream / beige / taupe / muted brown)
+- Classy serif headings (Cormorant Garamond) + clean sans body (Jost)
 - Fully responsive — mobile, tablet, and desktop
 - Smooth scrolling + subtle hover & scroll-reveal animations
 - Mobile hamburger menu
-- **Filterable portfolio gallery** with category tabs (Lifestyle & Home, Fashion, Travel, Beauty, Motherhood, Food)
-- Conversion-focused layout: trust chips, value/benefits band, and a mid-page call-to-action
-- All sections: Hero, Highlights, About, Why UGC, Portfolio, Services, Process, Packages, Contact
+- All 9 sections: Hero, About, Why UGC, Portfolio, Services, Process, Packages, Testimonials, Contact
 - Clearly commented placeholders so you know exactly where to add your photos, videos, and links
 
 ---
@@ -60,13 +57,19 @@ shivanisudhir.ugc/
 
 Drop your images into `assets/images/`, then replace a placeholder in `index.html`.
 
-**Hero / cover photo — already wired up.** Just save your photo as:
+**Example — Hero photo.** Find this block in `index.html`:
 
-```
-assets/images/hero.jpg
+```html
+<div class="placeholder placeholder--portrait">
+  <span>Your hero photo<br />1000 × 1250px</span>
+</div>
 ```
 
-It appears automatically in the retro arched frame. No code editing needed. Until that file exists, a styled "Save your photo as…" placeholder shows in its place. (Recommended ~1000 × 1250px portrait.)
+Replace it with:
+
+```html
+<img src="assets/images/hero.jpg" alt="Shivani Sudhir" class="placeholder--portrait" />
+```
 
 ### Recommended image dimensions
 
@@ -83,35 +86,27 @@ Use `.jpg` for photos (smaller files) and keep each image under ~500KB for fast 
 
 ## 🎬 Adding your portfolio videos
 
-The portfolio is a **filterable gallery** with tabs: *Lifestyle & Home, Fashion, Travel, Beauty & Skincare, Motherhood & Family, Food & Kitchen*. Each card belongs to a category via `data-category`.
-
 Put your `.mp4` files in `assets/videos/`. In `index.html`, find a portfolio card:
 
 ```html
-<figure class="work" data-category="lifestyle">
-  <div class="work__media placeholder placeholder--reel">
-    <span class="work__play">▶</span>
-    <span class="work__hint">Add reel · 9:16</span>
-  </div>
-  <figcaption><strong>Morning Routine</strong><span>Lifestyle &amp; Home</span></figcaption>
+<figure class="work">
+  <div class="placeholder placeholder--reel"><span>Product unboxing<br />9:16 reel</span></div>
+  <figcaption>Product Unboxing</figcaption>
 </figure>
 ```
 
-**Option A — self-hosted video** (replace the inner `<div class="work__media …">` block):
+**Option A — self-hosted video** (replace the `.placeholder` div):
 
 ```html
-<video class="work__media" controls muted playsinline poster="assets/images/cover.jpg">
-  <source src="assets/videos/your-clip.mp4" type="video/mp4" />
-</video>
+<figure class="work">
+  <video class="placeholder--reel" controls muted playsinline poster="assets/images/unboxing-cover.jpg">
+    <source src="assets/videos/unboxing.mp4" type="video/mp4" />
+  </video>
+  <figcaption>Product Unboxing</figcaption>
+</figure>
 ```
 
-**Option B — embed from Instagram/TikTok/YouTube:** paste their `<iframe>` embed code in place of that same `<div class="work__media …">` block.
-
-**To add more work:** copy a whole `<figure class="work" …>` block and set its `data-category` to one of:
-`lifestyle` · `fashion` · `travel` · `beauty` · `motherhood` · `food`
-(it must match a filter button's `data-filter` so the tab shows it).
-
-**To add or remove a category:** edit the `<div class="filters">` buttons near the top of the portfolio section — each `data-filter` value pairs with the cards' `data-category`.
+**Option B — embed from Instagram/TikTok/YouTube:** paste their embed `<iframe>` code in place of the `.placeholder` div.
 
 > Tip: keep self-hosted videos short and compressed. For longer reels, embedding from Instagram/TikTok keeps your repo light and loads faster.
 
@@ -131,8 +126,8 @@ They appear in the **Contact** section near the bottom.
 ## ✏️ Other easy edits
 
 - **Prices** — search `from $___` in the Packages section and add your rates.
+- **Testimonials** — search `TESTIMONIAL` in `index.html`; replace the quotes and names as you collect real ones. Duplicate a `<blockquote>` block to add more.
 - **Portfolio categories** — duplicate a `<figure class="work">` block to add more work.
-- **Testimonials** — none for now; a commented note in `index.html` (above the Contact section) marks where to add a reviews section once you've collected real brand feedback.
 - **Colors** — all colors live at the top of `style.css` under `:root` (`--cream`, `--beige`, `--brown`, etc.). Change them in one place to retheme the whole site.
 
 ---

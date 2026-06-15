@@ -16,10 +16,10 @@
   <meta property="og:image" content="assets/images/og-preview.jpg" />
   <meta property="og:type" content="website" />
 
-  <!-- Google Fonts: Pinyon Script (signature) + Cormorant Garamond (elegant serif) + Jost (sans body) -->
+  <!-- Google Fonts: Cormorant Garamond (serif headings) + Jost (clean sans body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -54,49 +54,25 @@
   <section class="hero" id="hero">
     <div class="container hero__inner">
       <div class="hero__text">
+        <p class="hero__eyebrow">UGC Creator &nbsp;•&nbsp; Lifestyle Content Creator</p>
         <h1 class="hero__name">Shivani Sudhir</h1>
-        <p class="hero__eyebrow">UGC Creator &nbsp;·&nbsp; Lifestyle Content Creator</p>
-        <p class="hero__niches">Beauty &nbsp;|&nbsp; Lifestyle &nbsp;|&nbsp; Home &nbsp;|&nbsp; Travel</p>
-
-        <!-- Social icons — update the links here and in the Contact section -->
-        <div class="hero__socials">
-          <a href="https://instagram.com/shivaanisudhir" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
-          <a href="#" aria-label="TikTok">TikTok</a>
-          <a href="mailto:shivaanisudhir@gmail.com" aria-label="Email">Email</a>
-        </div>
-
-        <p class="hero__tagline">Aesthetic lifestyle content that helps brands feel real, warm, and trustworthy.</p>
-        <p class="hero__location">📍 Sydney, Australia · working with brands worldwide</p>
-
+        <p class="hero__location">📍 Sydney, Australia</p>
+        <p class="hero__tagline">
+          Aesthetic lifestyle content that helps brands feel
+          real, warm, and trustworthy.
+        </p>
         <div class="hero__cta">
           <a href="#contact" class="btn btn--solid">Work With Me</a>
           <a href="#portfolio" class="btn btn--ghost">View Portfolio</a>
         </div>
       </div>
 
-      <!-- COVER IMAGE: save your photo as assets/images/hero.jpg
-           The onerror fallback shows a placeholder until the file is added. -->
+      <!-- REPLACE: hero image — recommended 1000x1250px (portrait), warm-toned -->
       <div class="hero__image">
-        <div class="hero__frame">
-          <img src="assets/images/hero.jpg" alt="Shivani Sudhir"
-               onerror="this.remove(); this.parentNode.classList.add('is-empty')" />
+        <div class="placeholder placeholder--portrait">
+          <span>Your hero photo<br />1000 × 1250px</span>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       VALUE / HIGHLIGHTS BAND
-       Honest selling points — what brands get working with you.
-       ============================================================ -->
-  <section class="value">
-    <div class="container value__grid">
-      <div class="value__item"><span class="value__icon">🎬</span><p>Scroll-stopping<br />short-form video</p></div>
-      <div class="value__item"><span class="value__icon">🌿</span><p>Authentic, natural<br />aesthetic</p></div>
-      <div class="value__item"><span class="value__icon">⚡</span><p>Fast 5–7 day<br />delivery</p></div>
-      <div class="value__item"><span class="value__icon">📦</span><p>Full usage<br />rights included</p></div>
-      <div class="value__item"><span class="value__icon">🔁</span><p>Revisions<br />included</p></div>
-      <div class="value__item"><span class="value__icon">🌏</span><p>Sydney based ·<br />works worldwide</p></div>
     </div>
   </section>
 
@@ -174,143 +150,51 @@
   </section>
 
   <!-- ============================================================
-       4. PORTFOLIO  (filterable gallery)
-       --------------------------------------------------------------
-       HOW TO ADD A VIDEO:
-       In each <figure class="work">, replace the <div class="work__media ...">
-       block with one of these (keep the data-category on the <figure>):
-
-       Self-hosted:
-         <video class="work__media" controls muted playsinline
-                poster="assets/images/cover.jpg">
-           <source src="assets/videos/your-clip.mp4" type="video/mp4" />
-         </video>
-
-       Or paste an Instagram / TikTok / YouTube <iframe> embed in its place.
-
-       TO ADD MORE WORK: copy a <figure> block and set its data-category to
-       one of: lifestyle | fashion | travel | beauty | motherhood | food
-       (must match a filter button's data-filter below).
+       4. PORTFOLIO
+       Each card is a placeholder. To add a video, replace the
+       inner .placeholder block with a <video> or embed (see README).
        ============================================================ -->
   <section class="section portfolio" id="portfolio">
     <div class="container">
       <div class="section__head">
         <p class="eyebrow">Portfolio</p>
-        <h2 class="heading">Content that makes brands unforgettable.</h2>
-        <p class="section__sub">Browse by niche. Fresh client work is added here regularly.</p>
+        <h2 class="heading">Selected work &amp; content styles.</h2>
+        <p class="section__sub">A glimpse of the categories I create in. Real client work coming soon.</p>
       </div>
 
-      <!-- FILTER TABS — delete a button to remove that category -->
-      <div class="filters" id="filters">
-        <button class="filter is-active" data-filter="all">All</button>
-        <button class="filter" data-filter="lifestyle">Lifestyle &amp; Home</button>
-        <button class="filter" data-filter="fashion">Fashion</button>
-        <button class="filter" data-filter="travel">Travel</button>
-        <button class="filter" data-filter="beauty">Beauty &amp; Skincare</button>
-        <button class="filter" data-filter="motherhood">Motherhood &amp; Family</button>
-        <button class="filter" data-filter="food">Food &amp; Kitchen</button>
+      <div class="portfolio__grid">
+        <!-- PORTFOLIO CARD — duplicate this block to add more.
+             Replace the .placeholder with your image/video. -->
+        <figure class="work">
+          <div class="placeholder placeholder--reel"><span>Product unboxing<br />9:16 reel</span></div>
+          <figcaption>Product Unboxing</figcaption>
+        </figure>
+
+        <figure class="work">
+          <div class="placeholder placeholder--reel"><span>Lifestyle b-roll<br />9:16 reel</span></div>
+          <figcaption>Lifestyle B-Roll</figcaption>
+        </figure>
+
+        <figure class="work">
+          <div class="placeholder placeholder--reel"><span>Home &amp; kitchen<br />9:16 reel</span></div>
+          <figcaption>Home &amp; Kitchen Content</figcaption>
+        </figure>
+
+        <figure class="work">
+          <div class="placeholder placeholder--reel"><span>Beauty &amp; skincare<br />9:16 reel</span></div>
+          <figcaption>Beauty &amp; Skincare</figcaption>
+        </figure>
+
+        <figure class="work">
+          <div class="placeholder placeholder--reel"><span>Motherhood &amp; family<br />9:16 reel</span></div>
+          <figcaption>Motherhood &amp; Family Lifestyle</figcaption>
+        </figure>
+
+        <figure class="work">
+          <div class="placeholder placeholder--reel"><span>Garden &amp; everyday<br />9:16 reel</span></div>
+          <figcaption>Garden &amp; Everyday Life</figcaption>
+        </figure>
       </div>
-
-      <div class="portfolio__grid" id="portfolioGrid">
-
-        <!-- LIFESTYLE & HOME -->
-        <figure class="work" data-category="lifestyle">
-          <div class="work__media placeholder placeholder--reel">
-            <span class="work__play" aria-hidden="true">▶</span>
-            <span class="work__hint">Add reel · 9:16</span>
-          </div>
-          <figcaption><strong>Morning Routine</strong><span>Lifestyle &amp; Home</span></figcaption>
-        </figure>
-
-        <figure class="work" data-category="lifestyle">
-          <div class="work__media placeholder placeholder--reel">
-            <span class="work__play" aria-hidden="true">▶</span>
-            <span class="work__hint">Add reel · 9:16</span>
-          </div>
-          <figcaption><strong>Home Styling B-Roll</strong><span>Lifestyle &amp; Home</span></figcaption>
-        </figure>
-
-        <!-- FASHION -->
-        <figure class="work" data-category="fashion">
-          <div class="work__media placeholder placeholder--reel">
-            <span class="work__play" aria-hidden="true">▶</span>
-            <span class="work__hint">Add reel · 9:16</span>
-          </div>
-          <figcaption><strong>Outfit Try-On</strong><span>Fashion</span></figcaption>
-        </figure>
-
-        <figure class="work" data-category="fashion">
-          <div class="work__media placeholder placeholder--reel">
-            <span class="work__play" aria-hidden="true">▶</span>
-            <span class="work__hint">Add reel · 9:16</span>
-          </div>
-          <figcaption><strong>Styling &amp; Accessories</strong><span>Fashion</span></figcaption>
-        </figure>
-
-        <!-- TRAVEL -->
-        <figure class="work" data-category="travel">
-          <div class="work__media placeholder placeholder--reel">
-            <span class="work__play" aria-hidden="true">▶</span>
-            <span class="work__hint">Add reel · 9:16</span>
-          </div>
-          <figcaption><strong>Destination Vlog</strong><span>Travel</span></figcaption>
-        </figure>
-
-        <figure class="work" data-category="travel">
-          <div class="work__media placeholder placeholder--reel">
-            <span class="work__play" aria-hidden="true">▶</span>
-            <span class="work__hint">Add reel · 9:16</span>
-          </div>
-          <figcaption><strong>Travel Essentials</strong><span>Travel</span></figcaption>
-        </figure>
-
-        <!-- BEAUTY & SKINCARE -->
-        <figure class="work" data-category="beauty">
-          <div class="work__media placeholder placeholder--reel">
-            <span class="work__play" aria-hidden="true">▶</span>
-            <span class="work__hint">Add reel · 9:16</span>
-          </div>
-          <figcaption><strong>Skincare Routine</strong><span>Beauty &amp; Skincare</span></figcaption>
-        </figure>
-
-        <figure class="work" data-category="beauty">
-          <div class="work__media placeholder placeholder--reel">
-            <span class="work__play" aria-hidden="true">▶</span>
-            <span class="work__hint">Add reel · 9:16</span>
-          </div>
-          <figcaption><strong>Product Close-Ups</strong><span>Beauty &amp; Skincare</span></figcaption>
-        </figure>
-
-        <!-- MOTHERHOOD & FAMILY -->
-        <figure class="work" data-category="motherhood">
-          <div class="work__media placeholder placeholder--reel">
-            <span class="work__play" aria-hidden="true">▶</span>
-            <span class="work__hint">Add reel · 9:16</span>
-          </div>
-          <figcaption><strong>Family Lifestyle</strong><span>Motherhood &amp; Family</span></figcaption>
-        </figure>
-
-        <!-- FOOD & KITCHEN -->
-        <figure class="work" data-category="food">
-          <div class="work__media placeholder placeholder--reel">
-            <span class="work__play" aria-hidden="true">▶</span>
-            <span class="work__hint">Add reel · 9:16</span>
-          </div>
-          <figcaption><strong>Kitchen &amp; Recipe</strong><span>Food &amp; Kitchen</span></figcaption>
-        </figure>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       MID-PAGE CTA BAND
-       ============================================================ -->
-  <section class="cta-band">
-    <div class="container cta-band__inner">
-      <h2>Like what you see?</h2>
-      <p>Let's create content your audience actually stops to watch.</p>
-      <a href="#contact" class="btn btn--solid">Start a Collaboration</a>
     </div>
   </section>
 
@@ -415,9 +299,38 @@
   </section>
 
   <!-- ============================================================
-       CONTACT
-       (A testimonials section can be added back here later, once
-        real brand reviews are collected.)
+       8. TESTIMONIALS
+       Replace quotes & names as you collect them.
+       ============================================================ -->
+  <section class="section testimonials" id="testimonials">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">Kind Words</p>
+        <h2 class="heading">What brands are saying.</h2>
+      </div>
+
+      <div class="testimonials__grid">
+        <!-- TESTIMONIAL — duplicate to add more -->
+        <blockquote class="card testimonial">
+          <p>“Add a real testimonial here once you've collected one. Shivani's content felt so natural and on-brand — exactly the warm, premium feel we wanted.”</p>
+          <footer><strong>Brand Name</strong><span>Founder / Marketing Lead</span></footer>
+        </blockquote>
+
+        <blockquote class="card testimonial">
+          <p>“Add a real testimonial here. The b-roll was beautiful and converted incredibly well on our paid ads.”</p>
+          <footer><strong>Brand Name</strong><span>Founder / Marketing Lead</span></footer>
+        </blockquote>
+
+        <blockquote class="card testimonial">
+          <p>“Add a real testimonial here. Easy to work with, fast delivery, and the aesthetic was perfect.”</p>
+          <footer><strong>Brand Name</strong><span>Founder / Marketing Lead</span></footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       9. CONTACT
        ============================================================ -->
   <section class="section contact" id="contact">
     <div class="container contact__inner">
