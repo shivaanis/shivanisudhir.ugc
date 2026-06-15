@@ -10,8 +10,8 @@
 :root {
   --cream:      #f4ecdd;   /* warm ivory background */
   --cream-2:    #efe5d3;   /* slightly deeper cream */
-  --mocha:      #5a2233;   /* dark burgundy block */
-  --mocha-dark: #431826;   /* deeper burgundy */
+  --mocha:      #421825;   /* deep burgundy block */
+  --mocha-dark: #321019;   /* deepest burgundy */
   --rose:       #b6917f;   /* dusty rose accent */
   --rose-soft:  #d8bcab;   /* soft rose */
   --ink:        #3c2e24;   /* espresso text */
@@ -215,16 +215,6 @@ p { color: var(--ink-soft); }
 .about__text .btn { margin-top: 8px; }
 
 .about__photo { position: relative; display: flex; justify-content: center; align-items: flex-start; }
-/* Soft rose arch peeking behind the photo */
-.about__archback {
-  position: absolute;
-  z-index: 0;
-  width: 78%;
-  aspect-ratio: 9 / 16;
-  right: 4%; top: 5%;
-  background: var(--rose-soft);
-  border-radius: 999px 999px 14px 14px;
-}
 /* Tall arch frame — shows the whole portrait, no cropping */
 .ph--portrait {
   position: relative; z-index: 1;
