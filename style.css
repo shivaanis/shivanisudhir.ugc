@@ -10,8 +10,8 @@
 :root {
   --cream:      #f4ecdd;   /* warm ivory background */
   --cream-2:    #efe5d3;   /* slightly deeper cream */
-  --mocha:      #57463a;   /* chocolate brown block */
-  --mocha-dark: #463729;   /* deep brown */
+  --mocha:      #5a2233;   /* dark burgundy block */
+  --mocha-dark: #431826;   /* deeper burgundy */
   --rose:       #b6917f;   /* dusty rose accent */
   --rose-soft:  #d8bcab;   /* soft rose */
   --ink:        #3c2e24;   /* espresso text */
@@ -236,31 +236,7 @@ p { color: var(--ink-soft); }
 .ph--portrait img { object-fit: cover; }
 
 /* ============================================================
-   3. FEATURED  (chocolate block)
-   ============================================================ */
-.featured { background: var(--mocha); }
-.featured__head .script { color: var(--rose-soft); }
-.featured__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 34px;
-}
-.feat { text-align: center; }
-.ph--arch {
-  aspect-ratio: 3 / 4;
-  border-radius: 50% / 38%;
-  border: 1px solid rgba(244, 236, 221, 0.25);
-}
-.feat figcaption {
-  margin-top: 16px;
-  font-size: 0.74rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: rgba(244, 236, 221, 0.85);
-}
-
-/* ============================================================
-   4. PREVIOUS WORK  (phone mockups)
+   3. PREVIOUS WORK  (phone mockups)
    ============================================================ */
 .work { background: var(--cream); }
 .work__grid {
