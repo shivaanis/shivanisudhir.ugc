@@ -7,24 +7,28 @@
    Mobile-first, responsive, soft and premium.
    ============================================================ */
 
-/* ---------- DESIGN TOKENS (edit colors here) ---------- */
+/* ---------- DESIGN TOKENS (edit colors here) ----------
+   Retro / 70s warm palette: ivory, terracotta, gold, olive, espresso.
+   ------------------------------------------------------ */
 :root {
-  --cream:      #faf6f1;   /* page background */
-  --beige:      #f0e7dd;   /* soft sections / cards */
-  --taupe:      #d8c7b6;   /* borders, accents */
-  --sand:       #c9b29c;   /* hover accent */
-  --brown:      #8a6f59;   /* muted brown — buttons/accents */
-  --brown-dark: #6b5544;   /* hover / deep accent */
-  --ink:        #4a3f37;   /* primary text */
-  --ink-soft:   #7c6f64;   /* secondary text */
-  --white:      #ffffff;
+  --cream:      #f4e9d6;   /* warm ivory page background */
+  --beige:      #ecdcc2;   /* soft sections */
+  --taupe:      #d9bd95;   /* borders, accents */
+  --sand:       #cf9a58;   /* hover accent */
+  --brown:      #b35a32;   /* terracotta — primary buttons/accents */
+  --brown-dark: #8c4322;   /* deep rust — hover */
+  --ink:        #43291b;   /* espresso text */
+  --ink-soft:   #8a6850;   /* secondary text */
+  --white:      #fbf3e6;   /* warm off-white (cards) */
+  --mustard:    #cf9233;   /* retro gold accent */
+  --olive:      #6f7440;   /* retro olive accent */
 
-  --shadow-sm: 0 4px 14px rgba(138, 111, 89, 0.08);
-  --shadow-md: 0 12px 32px rgba(138, 111, 89, 0.12);
+  --shadow-sm: 0 4px 14px rgba(140, 67, 34, 0.10);
+  --shadow-md: 0 14px 34px rgba(140, 67, 34, 0.16);
   --radius:    18px;
   --radius-sm: 12px;
 
-  --serif: "Cormorant Garamond", Georgia, serif;
+  --serif: "Fraunces", Georgia, "Times New Roman", serif;
   --sans:  "Jost", -apple-system, BlinkMacSystemFont, sans-serif;
 
   --max:   1140px;
@@ -607,6 +611,98 @@ p { color: var(--ink-soft); }
 /* ---------- SCROLL-REVEAL (toggled by script.js) ---------- */
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
 .reveal.visible { opacity: 1; transform: none; }
+
+/* ============================================================
+   RETRO ENHANCEMENTS
+   ============================================================ */
+
+/* Subtle film-grain texture over the whole page */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.05;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Retro asterisk before section labels */
+.eyebrow::before,
+.hero__eyebrow::before {
+  content: "✶ ";
+  color: var(--mustard);
+}
+
+/* Warm up the hero glow with a retro radial wash */
+.hero {
+  background:
+    radial-gradient(1100px 480px at 80% -10%, rgba(207, 146, 51, 0.20), transparent 60%),
+    radial-gradient(800px 420px at 0% 110%, rgba(179, 90, 50, 0.12), transparent 55%),
+    var(--cream);
+}
+
+/* ---------- HERO PHOTO — retro arched frame ---------- */
+.hero__frame {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  width: 100%;
+  /* Arched top — classic 70s shape */
+  border-radius: 50% 50% var(--radius) var(--radius) / 32% 32% var(--radius) var(--radius);
+  overflow: hidden;
+  border: 3px solid var(--mustard);
+  box-shadow: 0 20px 44px rgba(140, 67, 34, 0.26);
+  background:
+    repeating-linear-gradient(45deg, var(--beige), var(--beige) 14px, #e4d2b2 14px, #e4d2b2 28px);
+}
+.hero__frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 22%;
+  /* Vintage colour grade */
+  filter: saturate(0.94) contrast(1.03) sepia(0.14) brightness(1.02);
+}
+/* Warm retro wash over the photo */
+.hero__frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(207, 146, 51, 0.14), rgba(179, 90, 50, 0.20));
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+/* Gold corner badge */
+.hero__badge {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  z-index: 2;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brown-dark);
+  background: var(--cream);
+  padding: 7px 15px;
+  border-radius: 50px;
+  border: 1.5px solid var(--mustard);
+}
+/* Fallback shown until assets/images/hero.jpg exists */
+.hero__frame.is-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-style: dashed;
+}
+.hero__frame.is-empty::before {
+  content: "Save your photo as\A assets/images/hero.jpg";
+  white-space: pre;
+  text-align: center;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--brown-dark);
+}
 
 /* ============================================================
    RESPONSIVE — TABLET

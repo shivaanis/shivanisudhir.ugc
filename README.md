@@ -8,8 +8,9 @@ Built with **HTML, CSS, and JavaScript only** — no backend, no frameworks, no 
 
 ## ✨ Features
 
-- Warm, premium, Pinterest-style design (cream / beige / taupe / muted brown)
-- Classy serif headings (Cormorant Garamond) + clean sans body (Jost)
+- Warm **retro / vintage** aesthetic — ivory, terracotta, gold & olive, with a subtle film-grain texture
+- Vintage-inspired serif headings (Fraunces) + clean sans body (Jost)
+- Retro arched hero photo frame with a gold badge
 - Fully responsive — mobile, tablet, and desktop
 - Smooth scrolling + subtle hover & scroll-reveal animations
 - Mobile hamburger menu
@@ -59,19 +60,13 @@ shivanisudhir.ugc/
 
 Drop your images into `assets/images/`, then replace a placeholder in `index.html`.
 
-**Example — Hero photo.** Find this block in `index.html`:
+**Hero / cover photo — already wired up.** Just save your photo as:
 
-```html
-<div class="placeholder placeholder--portrait">
-  <span>Your hero photo<br />1000 × 1250px</span>
-</div>
+```
+assets/images/hero.jpg
 ```
 
-Replace it with:
-
-```html
-<img src="assets/images/hero.jpg" alt="Shivani Sudhir" class="placeholder--portrait" />
-```
+It appears automatically in the retro arched frame. No code editing needed. Until that file exists, a styled "Save your photo as…" placeholder shows in its place. (Recommended ~1000 × 1250px portrait.)
 
 ### Recommended image dimensions
 

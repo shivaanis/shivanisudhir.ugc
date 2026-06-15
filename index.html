@@ -16,10 +16,10 @@
   <meta property="og:image" content="assets/images/og-preview.jpg" />
   <meta property="og:type" content="website" />
 
-  <!-- Google Fonts: Cormorant Garamond (serif headings) + Jost (clean sans body) -->
+  <!-- Google Fonts: Fraunces (retro/vintage serif headings) + Jost (clean sans body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -73,10 +73,14 @@
         </ul>
       </div>
 
-      <!-- REPLACE: hero image — recommended 1000x1250px (portrait), warm-toned -->
+      <!-- COVER IMAGE: save your photo as assets/images/hero.jpg
+           (recommended ~1000x1250px portrait). The onerror fallback
+           shows a styled placeholder until the file is added. -->
       <div class="hero__image">
-        <div class="placeholder placeholder--portrait">
-          <span>Your hero photo<br />1000 × 1250px</span>
+        <div class="hero__frame">
+          <img src="assets/images/hero.jpg" alt="Shivani Sudhir"
+               onerror="this.remove(); this.parentNode.classList.add('is-empty')" />
+          <span class="hero__badge">Sydney ✶ UGC Creator</span>
         </div>
       </div>
     </div>
