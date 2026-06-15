@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // then IntersectionObserver toggles .visible when it enters view.
   const revealTargets = document.querySelectorAll(
     ".section__head, .hero__text, .hero__image, .about__image, .about__text, " +
-    ".why__card, .work, .service, .process__step, .package, .testimonial, .contact__inner"
+    ".why__card, .work, .service, .process__step, .package, .contact__inner"
   );
 
   revealTargets.forEach(function (el) { el.classList.add("reveal"); });

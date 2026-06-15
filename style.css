@@ -445,26 +445,6 @@ p { color: var(--ink-soft); }
   color: var(--brown-dark);
 }
 
-/* ---------- TESTIMONIALS ---------- */
-.testimonials { background: var(--white); }
-.testimonials__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-}
-.testimonial { padding: 34px 30px; }
-.testimonial p {
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: 1.15rem;
-  line-height: 1.5;
-  color: var(--ink);
-  margin-bottom: 20px;
-}
-.testimonial footer { display: flex; flex-direction: column; }
-.testimonial strong { color: var(--brown-dark); font-weight: 600; }
-.testimonial span { font-size: 0.85rem; color: var(--ink-soft); }
-
 /* ---------- CONTACT ---------- */
 .contact {
   background:
@@ -503,7 +483,6 @@ p { color: var(--ink-soft); }
   .services__grid{ grid-template-columns: repeat(3, 1fr); }
   .process__steps{ grid-template-columns: repeat(2, 1fr); }
   .packages__grid{ grid-template-columns: repeat(3, 1fr); }
-  .testimonials__grid { grid-template-columns: repeat(2, 1fr); }
   .footer__inner { flex-direction: row; justify-content: space-between; }
 }
 
@@ -513,7 +492,6 @@ p { color: var(--ink-soft); }
 @media (min-width: 1000px) {
   .portfolio__grid    { grid-template-columns: repeat(3, 1fr); }
   .process__steps     { grid-template-columns: repeat(3, 1fr); }
-  .testimonials__grid { grid-template-columns: repeat(3, 1fr); }
   .why__card { padding: 38px 34px; }
 }
 

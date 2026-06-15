@@ -13,7 +13,7 @@ Built with **HTML, CSS, and JavaScript only** — no backend, no frameworks, no 
 - Fully responsive — mobile, tablet, and desktop
 - Smooth scrolling + subtle hover & scroll-reveal animations
 - Mobile hamburger menu
-- All 9 sections: Hero, About, Why UGC, Portfolio, Services, Process, Packages, Testimonials, Contact
+- All sections: Hero, About, Why UGC, Portfolio, Services, Process, Packages, Contact
 - Clearly commented placeholders so you know exactly where to add your photos, videos, and links
 
 ---
@@ -126,8 +126,8 @@ They appear in the **Contact** section near the bottom.
 ## ✏️ Other easy edits
 
 - **Prices** — search `from $___` in the Packages section and add your rates.
-- **Testimonials** — search `TESTIMONIAL` in `index.html`; replace the quotes and names as you collect real ones. Duplicate a `<blockquote>` block to add more.
 - **Portfolio categories** — duplicate a `<figure class="work">` block to add more work.
+- **Testimonials** — none for now; a commented note in `index.html` (above the Contact section) marks where to add a reviews section once you've collected real brand feedback.
 - **Colors** — all colors live at the top of `style.css` under `:root` (`--cream`, `--beige`, `--brown`, etc.). Change them in one place to retheme the whole site.
 
 ---
