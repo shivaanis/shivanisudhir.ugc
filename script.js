@@ -62,7 +62,25 @@ document.addEventListener("DOMContentLoaded", function () {
     revealTargets.forEach(function (el) { el.classList.add("visible"); });
   }
 
-  /* ---------- 4. Auto-update footer year ---------- */
+  /* ---------- 4. Portfolio videos: lazy-load + autoplay in view ---------- */
+  const videos = document.querySelectorAll(".ph__video");
+  if (videos.length && "IntersectionObserver" in window) {
+    const vObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        const v = entry.target;
+        if (entry.isIntersecting) {
+          if (!v.src && v.dataset.src) { v.src = v.dataset.src; }
+          const playPromise = v.play();
+          if (playPromise) { playPromise.catch(function () {}); }
+        } else {
+          v.pause();
+        }
+      });
+    }, { threshold: 0.4 });
+    videos.forEach(function (v) { vObserver.observe(v); });
+  }
+
+  /* ---------- 5. Auto-update footer year ---------- */
   const yearSpan = document.getElementById("year");
   if (yearSpan) { yearSpan.textContent = new Date().getFullYear(); }
 
