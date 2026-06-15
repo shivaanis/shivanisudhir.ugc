@@ -300,8 +300,8 @@ p { color: var(--ink-soft); }
 }
 .work__grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 40px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px 16px;
   justify-items: center;
 }
 .phone-item { display: flex; flex-direction: column; align-items: center; width: 100%; }
@@ -457,7 +457,7 @@ p { color: var(--ink-soft); }
   .about__inner   { grid-template-columns: 1.05fr 0.95fr; gap: 64px; }
   .why__grid      { grid-template-columns: repeat(2, 1fr); }
   .featured__grid { grid-template-columns: repeat(3, 1fr); gap: 26px; }
-  .work__grid     { grid-template-columns: repeat(3, 1fr); }
+  .work__grid     { grid-template-columns: repeat(4, 1fr); gap: 34px 22px; }
   .process__steps { grid-template-columns: repeat(3, 1fr); }
   .packages__grid { grid-template-columns: repeat(3, 1fr); }
   .footer__inner  { flex-direction: row; justify-content: space-between; }
