@@ -116,8 +116,8 @@ Put your `.mp4` files in `assets/videos/`. In `index.html`, find a portfolio car
 
 In `index.html`, search for these and edit if anything changes:
 
-- **Email:** `mailto:shivaanisudhir@gmail.com`
-- **Instagram:** `https://instagram.com/shivaanisudhir`
+- **Email:** `mailto:shivaani.enquires@gmail.com`
+- **Instagram:** `https://www.instagram.com/shivaani_naveen`
 
 They appear in the **Contact** section near the bottom.
 
