@@ -6,20 +6,18 @@
 
   <!-- ============================================================
        SEO + SOCIAL SHARING
-       Edit the description, and the og:image URL once you host it.
        ============================================================ -->
   <title>Shivani Sudhir — UGC & Lifestyle Content Creator | Sydney</title>
-  <meta name="description" content="Shivani Sudhir is a UGC and lifestyle content creator in Sydney, Australia. Aesthetic, warm, natural product storytelling for home, beauty, wellness, motherhood, and lifestyle brands." />
+  <meta name="description" content="Shivani Sudhir — UGC and lifestyle content creator in Sydney, Australia. Aesthetic, warm, natural product storytelling for beauty, home, lifestyle, and travel brands." />
   <meta property="og:title" content="Shivani Sudhir — UGC & Lifestyle Content Creator" />
   <meta property="og:description" content="Aesthetic lifestyle content that helps brands feel real, warm, and trustworthy." />
-  <!-- REPLACE: og:image with a hosted preview image (1200x630px recommended) -->
-  <meta property="og:image" content="assets/images/og-preview.jpg" />
+  <meta property="og:image" content="assets/images/hero.jpg" />
   <meta property="og:type" content="website" />
 
-  <!-- Google Fonts: Cormorant Garamond (serif headings) + Jost (clean sans body) -->
+  <!-- Fonts: Cormorant Garamond (elegant serif) + Pinyon Script (signature) + Jost (sans) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Pinyon+Script&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -31,17 +29,14 @@
   <header class="nav" id="nav">
     <div class="container nav__inner">
       <a href="#hero" class="nav__brand">Shivani&nbsp;Sudhir</a>
-
       <nav class="nav__links" id="navLinks">
         <a href="#about">About</a>
-        <a href="#why">Why UGC</a>
-        <a href="#portfolio">Portfolio</a>
+        <a href="#featured">Featured</a>
+        <a href="#work">Work</a>
         <a href="#services">Services</a>
-        <a href="#process">Process</a>
         <a href="#packages">Packages</a>
         <a href="#contact" class="nav__cta">Work With Me</a>
       </nav>
-
       <button class="nav__toggle" id="navToggle" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
@@ -49,46 +44,31 @@
   </header>
 
   <!-- ============================================================
-       1. HERO
+       1. HERO  (full-bleed image + overlaid title)
+       IMAGE SLOT: assets/images/hero.jpg  (wide / portrait, moody)
        ============================================================ -->
   <section class="hero" id="hero">
-    <div class="container hero__inner">
-      <div class="hero__text">
-        <p class="hero__eyebrow">UGC Creator &nbsp;•&nbsp; Lifestyle Content Creator</p>
-        <h1 class="hero__name">Shivani Sudhir</h1>
-        <p class="hero__location">📍 Sydney, Australia</p>
-        <p class="hero__tagline">
-          Aesthetic lifestyle content that helps brands feel
-          real, warm, and trustworthy.
-        </p>
-        <div class="hero__cta">
-          <a href="#contact" class="btn btn--solid">Work With Me</a>
-          <a href="#portfolio" class="btn btn--ghost">View Portfolio</a>
-        </div>
-      </div>
-
-      <!-- Hero photo — to swap, replace assets/images/hero.jpg -->
-      <div class="hero__image">
-        <img src="assets/images/hero.jpg" alt="Shivani Sudhir" class="hero__photo" />
-      </div>
+    <div class="hero__media">
+      <img src="assets/images/hero.jpg" alt="Shivani Sudhir"
+           onerror="this.remove(); this.parentNode.classList.add('empty')" />
+      <span class="hero__hint">HERO IMAGE · assets/images/hero.jpg</span>
+    </div>
+    <div class="hero__overlay">
+      <h1 class="hero__title">Portfolio</h1>
+      <p class="hero__sub">UGC &amp; lifestyle <span class="script">content</span></p>
+      <span class="hero__name">Shivani Sudhir</span>
     </div>
   </section>
 
   <!-- ============================================================
        2. ABOUT ME
+       IMAGE SLOT: assets/images/about.jpg  (square portrait, smiling)
        ============================================================ -->
   <section class="section about" id="about">
     <div class="container about__inner">
-      <!-- REPLACE: about image — recommended 800x1000px -->
-      <div class="about__image">
-        <div class="placeholder placeholder--portrait">
-          <span>About photo<br />800 × 1000px</span>
-        </div>
-      </div>
-
       <div class="about__text">
-        <p class="eyebrow">About Me</p>
-        <h2 class="heading">Soft visuals, real moments, content brands trust.</h2>
+        <p class="label">About Me</p>
+        <h2 class="display">Soft visuals, real moments, content brands trust.</h2>
         <p>
           I create aesthetic lifestyle content for brands through natural product
           storytelling, soft visuals, and relatable everyday moments. My work lives
@@ -96,102 +76,100 @@
           a skincare routine, a product becoming part of a real home.
         </p>
         <p>
-          My style works well for home, beauty, wellness, motherhood, lifestyle,
-          kitchen, gardening, and family-focused brands looking for content that
-          feels warm, honest, and effortlessly premium.
+          My style works well for beauty, home, wellness, lifestyle, food, and
+          travel brands looking for content that feels warm, honest, and
+          effortlessly premium.
         </p>
-        <div class="about__tags">
-          <span>Lifestyle</span>
-          <span>Beauty &amp; Skincare</span>
-          <span>Home &amp; Kitchen</span>
-          <span>Motherhood</span>
-          <span>Wellness</span>
-          <span>Garden &amp; Everyday</span>
+        <a href="#contact" class="btn btn--solid">Let's Work Together</a>
+      </div>
+
+      <div class="about__photo">
+        <span class="about__circle"></span>
+        <div class="ph ph--circle">
+          <img src="assets/images/about.jpg" alt="Shivani Sudhir"
+               onerror="this.remove(); this.parentNode.classList.add('empty')" />
+          <span class="ph__hint">About photo</span>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ============================================================
-       3. WHY UGC
+       3. FEATURED  (chocolate block + arched images)
+       IMAGE SLOTS: assets/images/feat-1.jpg, feat-2.jpg, feat-3.jpg
        ============================================================ -->
-  <section class="section why" id="why">
+  <section class="section featured" id="featured">
     <div class="container">
-      <div class="section__head">
-        <p class="eyebrow">Why UGC</p>
-        <h2 class="heading">Content that connects before it sells.</h2>
+      <div class="featured__head">
+        <p class="script script--lg">Featured</p>
+        <p class="label label--light">Content I create</p>
       </div>
 
-      <div class="why__grid">
-        <article class="card why__card">
-          <span class="why__num">01</span>
-          <h3>Authentic content builds trust</h3>
-          <p>Real faces and real moments feel honest — and honesty is what makes people stop scrolling and start believing.</p>
-        </article>
-        <article class="card why__card">
-          <span class="why__num">02</span>
-          <h3>Real-life use helps customers connect</h3>
-          <p>Showing a product in everyday life lets customers picture it in their own — the fastest path from interest to purchase.</p>
-        </article>
-        <article class="card why__card">
-          <span class="why__num">03</span>
-          <h3>One shoot, endless placements</h3>
-          <p>Use UGC across paid ads, organic socials, websites, and product pages — versatile content that works everywhere.</p>
-        </article>
-        <article class="card why__card">
-          <span class="why__num">04</span>
-          <h3>Aesthetic content elevates your brand</h3>
-          <p>Soft, considered visuals raise brand perception and make your product feel as premium as it deserves to.</p>
-        </article>
+      <div class="featured__grid">
+        <figure class="feat">
+          <div class="ph ph--arch">
+            <img src="assets/images/feat-1.jpg" alt="Beauty &amp; skincare content"
+                 onerror="this.remove(); this.parentNode.classList.add('empty')" />
+            <span class="ph__hint">Image 1</span>
+          </div>
+          <figcaption>Beauty &amp; Skincare</figcaption>
+        </figure>
+
+        <figure class="feat">
+          <div class="ph ph--arch">
+            <img src="assets/images/feat-2.jpg" alt="Home &amp; lifestyle content"
+                 onerror="this.remove(); this.parentNode.classList.add('empty')" />
+            <span class="ph__hint">Image 2</span>
+          </div>
+          <figcaption>Home &amp; Lifestyle</figcaption>
+        </figure>
+
+        <figure class="feat">
+          <div class="ph ph--arch">
+            <img src="assets/images/feat-3.jpg" alt="Food &amp; travel content"
+                 onerror="this.remove(); this.parentNode.classList.add('empty')" />
+            <span class="ph__hint">Image 3</span>
+          </div>
+          <figcaption>Food &amp; Travel</figcaption>
+        </figure>
       </div>
     </div>
   </section>
 
   <!-- ============================================================
-       4. PORTFOLIO
-       Each card is a placeholder. To add a video, replace the
-       inner .placeholder block with a <video> or embed (see README).
+       4. PREVIOUS WORK  (phone-mockup reels)
+       VIDEO/IMAGE SLOTS: assets/images/reel-1.jpg ... reel-3.jpg
+       (or replace the <img> with a <video> — see README)
        ============================================================ -->
-  <section class="section portfolio" id="portfolio">
+  <section class="section work" id="work">
     <div class="container">
-      <div class="section__head">
-        <p class="eyebrow">Portfolio</p>
-        <h2 class="heading">Selected work &amp; content styles.</h2>
-        <p class="section__sub">A glimpse of the categories I create in. Real client work coming soon.</p>
+      <div class="work__head">
+        <p class="script script--lg">Previous Work</p>
+        <p class="label">Selected reels &amp; short-form</p>
       </div>
 
-      <div class="portfolio__grid">
-        <!-- PORTFOLIO CARD — duplicate this block to add more.
-             Replace the .placeholder with your image/video. -->
-        <figure class="work">
-          <div class="placeholder placeholder--reel"><span>Product unboxing<br />9:16 reel</span></div>
-          <figcaption>Product Unboxing</figcaption>
-        </figure>
-
-        <figure class="work">
-          <div class="placeholder placeholder--reel"><span>Lifestyle b-roll<br />9:16 reel</span></div>
-          <figcaption>Lifestyle B-Roll</figcaption>
-        </figure>
-
-        <figure class="work">
-          <div class="placeholder placeholder--reel"><span>Home &amp; kitchen<br />9:16 reel</span></div>
-          <figcaption>Home &amp; Kitchen Content</figcaption>
-        </figure>
-
-        <figure class="work">
-          <div class="placeholder placeholder--reel"><span>Beauty &amp; skincare<br />9:16 reel</span></div>
-          <figcaption>Beauty &amp; Skincare</figcaption>
-        </figure>
-
-        <figure class="work">
-          <div class="placeholder placeholder--reel"><span>Motherhood &amp; family<br />9:16 reel</span></div>
-          <figcaption>Motherhood &amp; Family Lifestyle</figcaption>
-        </figure>
-
-        <figure class="work">
-          <div class="placeholder placeholder--reel"><span>Garden &amp; everyday<br />9:16 reel</span></div>
-          <figcaption>Garden &amp; Everyday Life</figcaption>
-        </figure>
+      <div class="work__grid">
+        <div class="phone">
+          <div class="ph ph--reel">
+            <img src="assets/images/reel-1.jpg" alt="Reel 1"
+                 onerror="this.remove(); this.parentNode.classList.add('empty')" />
+            <span class="ph__hint">Reel 1 · 9:16</span>
+          </div>
+        </div>
+        <div class="phone">
+          <div class="ph ph--reel">
+            <img src="assets/images/reel-2.jpg" alt="Reel 2"
+                 onerror="this.remove(); this.parentNode.classList.add('empty')" />
+            <span class="ph__hint">Reel 2 · 9:16</span>
+          </div>
+        </div>
+        <div class="phone">
+          <div class="ph ph--reel">
+            <img src="assets/images/reel-3.jpg" alt="Reel 3"
+                 onerror="this.remove(); this.parentNode.classList.add('empty')" />
+            <span class="ph__hint">Reel 3 · 9:16</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -202,62 +180,57 @@
   <section class="section services" id="services">
     <div class="container">
       <div class="section__head">
-        <p class="eyebrow">Services</p>
-        <h2 class="heading">Ways we can work together.</h2>
+        <p class="script script--lg">Services</p>
+        <p class="label">Ways we can work together</p>
       </div>
-
       <ul class="services__grid">
-        <li class="card service">UGC Videos</li>
-        <li class="card service">Product Photography</li>
-        <li class="card service">Unboxing Videos</li>
-        <li class="card service">Voiceover Videos</li>
-        <li class="card service">Aesthetic B-Roll</li>
-        <li class="card service">Product Demos</li>
-        <li class="card service">Organic Reels</li>
-        <li class="card service">Paid Ad Creatives</li>
-        <li class="card service">Short-Form (IG / TikTok)</li>
+        <li>UGC Videos</li>
+        <li>Product Photography</li>
+        <li>Unboxing Videos</li>
+        <li>Voiceover Videos</li>
+        <li>Aesthetic B-Roll</li>
+        <li>Product Demos</li>
+        <li>Organic Reels</li>
+        <li>Paid Ad Creatives</li>
+        <li>Short-Form (IG / TikTok)</li>
       </ul>
     </div>
   </section>
 
   <!-- ============================================================
-       6. CONTENT PROCESS
+       6. PROCESS
        ============================================================ -->
   <section class="section process" id="process">
     <div class="container">
       <div class="section__head">
-        <p class="eyebrow">The Process</p>
-        <h2 class="heading">Simple, collaborative, stress-free.</h2>
+        <p class="script script--lg">The Process</p>
+        <p class="label">Simple, collaborative, stress-free</p>
       </div>
-
       <ol class="process__steps">
-        <li class="process__step"><span class="process__num">1</span><h3>Brand Brief</h3><p>You share your product, goals, and vision.</p></li>
-        <li class="process__step"><span class="process__num">2</span><h3>Concept Planning</h3><p>I plan shots, scenes, and storytelling angle.</p></li>
-        <li class="process__step"><span class="process__num">3</span><h3>Filming</h3><p>Natural light, soft styling, authentic delivery.</p></li>
-        <li class="process__step"><span class="process__num">4</span><h3>Editing</h3><p>Polished, on-brand cuts ready to publish.</p></li>
-        <li class="process__step"><span class="process__num">5</span><h3>Delivery</h3><p>Files sent in your preferred formats.</p></li>
-        <li class="process__step"><span class="process__num">6</span><h3>Revisions</h3><p>Refinements included so it feels just right.</p></li>
+        <li><span>01</span><h3>Brand Brief</h3><p>You share your product, goals, and vision.</p></li>
+        <li><span>02</span><h3>Concept Planning</h3><p>I plan shots, scenes, and the storytelling angle.</p></li>
+        <li><span>03</span><h3>Filming</h3><p>Natural light, soft styling, authentic delivery.</p></li>
+        <li><span>04</span><h3>Editing</h3><p>Polished, on-brand cuts ready to publish.</p></li>
+        <li><span>05</span><h3>Delivery</h3><p>Files sent in your preferred formats.</p></li>
+        <li><span>06</span><h3>Revisions</h3><p>Refinements included so it feels just right.</p></li>
       </ol>
     </div>
   </section>
 
   <!-- ============================================================
        7. PACKAGES
-       Edit prices/details freely. Prices left blank — add yours.
        ============================================================ -->
   <section class="section packages" id="packages">
     <div class="container">
       <div class="section__head">
-        <p class="eyebrow">Packages</p>
-        <h2 class="heading">Flexible options for every brand.</h2>
+        <p class="script script--lg">Packages</p>
+        <p class="label">Flexible options for every brand</p>
       </div>
-
       <div class="packages__grid">
-        <article class="card package">
-          <h3 class="package__name">Starter</h3>
-          <!-- REPLACE: add your price, e.g. "from $___" -->
+        <article class="package">
+          <h3>Starter</h3>
           <p class="package__price">from&nbsp;$___</p>
-          <ul class="package__list">
+          <ul>
             <li>1 UGC video</li>
             <li>1 concept &amp; script</li>
             <li>1 round of revisions</li>
@@ -265,12 +238,11 @@
           </ul>
           <a href="#contact" class="btn btn--ghost btn--block">Enquire</a>
         </article>
-
-        <article class="card package package--featured">
+        <article class="package package--featured">
           <span class="package__badge">Most Popular</span>
-          <h3 class="package__name">Growth</h3>
+          <h3>Growth</h3>
           <p class="package__price">from&nbsp;$___</p>
-          <ul class="package__list">
+          <ul>
             <li>3 UGC videos</li>
             <li>Multiple hooks &amp; angles</li>
             <li>2 rounds of revisions</li>
@@ -278,11 +250,10 @@
           </ul>
           <a href="#contact" class="btn btn--solid btn--block">Enquire</a>
         </article>
-
-        <article class="card package">
-          <h3 class="package__name">Premium</h3>
+        <article class="package">
+          <h3>Premium</h3>
           <p class="package__price">from&nbsp;$___</p>
-          <ul class="package__list">
+          <ul>
             <li>5 UGC videos + photos</li>
             <li>Full content suite</li>
             <li>Priority delivery</li>
@@ -291,65 +262,28 @@
           <a href="#contact" class="btn btn--ghost btn--block">Enquire</a>
         </article>
       </div>
-
-      <p class="packages__note">✨ Custom packages available — just reach out and we'll build something that fits.</p>
+      <p class="packages__note">Custom packages available — just reach out.</p>
     </div>
   </section>
 
   <!-- ============================================================
-       8. TESTIMONIALS
-       Replace quotes & names as you collect them.
-       ============================================================ -->
-  <section class="section testimonials" id="testimonials">
-    <div class="container">
-      <div class="section__head">
-        <p class="eyebrow">Kind Words</p>
-        <h2 class="heading">What brands are saying.</h2>
-      </div>
-
-      <div class="testimonials__grid">
-        <!-- TESTIMONIAL — duplicate to add more -->
-        <blockquote class="card testimonial">
-          <p>“Add a real testimonial here once you've collected one. Shivani's content felt so natural and on-brand — exactly the warm, premium feel we wanted.”</p>
-          <footer><strong>Brand Name</strong><span>Founder / Marketing Lead</span></footer>
-        </blockquote>
-
-        <blockquote class="card testimonial">
-          <p>“Add a real testimonial here. The b-roll was beautiful and converted incredibly well on our paid ads.”</p>
-          <footer><strong>Brand Name</strong><span>Founder / Marketing Lead</span></footer>
-        </blockquote>
-
-        <blockquote class="card testimonial">
-          <p>“Add a real testimonial here. Easy to work with, fast delivery, and the aesthetic was perfect.”</p>
-          <footer><strong>Brand Name</strong><span>Founder / Marketing Lead</span></footer>
-        </blockquote>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       9. CONTACT
+       8. CONTACT
        ============================================================ -->
   <section class="section contact" id="contact">
     <div class="container contact__inner">
-      <p class="eyebrow">Get In Touch</p>
-      <h2 class="heading contact__heading">Let's create beautiful content for your brand.</h2>
+      <p class="script script--lg">Let's create</p>
+      <h2 class="display">Beautiful content for your brand.</h2>
       <p class="contact__text">
         Available for UGC collaborations, paid partnerships, and ongoing content.
         Tell me about your brand — I'd love to hear from you.
       </p>
-
       <div class="contact__links">
-        <!-- REPLACE links if your details change -->
         <a href="mailto:shivaanisudhir@gmail.com" class="btn btn--solid">✉ shivaanisudhir@gmail.com</a>
-        <a href="https://instagram.com/shivaanisudhir" target="_blank" rel="noopener" class="btn btn--ghost">📷 @shivaanisudhir</a>
+        <a href="https://instagram.com/shivaanisudhir" target="_blank" rel="noopener" class="btn btn--ghost">@shivaanisudhir</a>
       </div>
     </div>
   </section>
 
-  <!-- ============================================================
-       FOOTER
-       ============================================================ -->
   <footer class="footer">
     <div class="container footer__inner">
       <span class="footer__brand">Shivani Sudhir</span>

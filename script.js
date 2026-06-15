@@ -40,8 +40,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // Any element we want to fade-up gets the .reveal class added,
   // then IntersectionObserver toggles .visible when it enters view.
   const revealTargets = document.querySelectorAll(
-    ".section__head, .hero__text, .hero__image, .about__image, .about__text, " +
-    ".why__card, .work, .service, .process__step, .package, .testimonial, .contact__inner"
+    ".section__head, .featured__head, .work__head, .about__text, .about__photo, " +
+    ".feat, .phone, .services__grid li, .process__steps li, .package, .contact__inner"
   );
 
   revealTargets.forEach(function (el) { el.classList.add("reveal"); });
