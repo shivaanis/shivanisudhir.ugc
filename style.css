@@ -208,14 +208,14 @@ p { color: var(--ink-soft); }
 }
 .hero__name {
   display: inline-block;
-  margin-top: 26px;
-  font-size: 0.78rem;
-  letter-spacing: 0.28em;
+  margin-top: 28px;
+  font-size: 1.15rem;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--cream);
   background: rgba(182, 145, 127, 0.55);
   border: 1px solid rgba(244, 236, 221, 0.4);
-  padding: 11px 26px;
+  padding: 14px 34px;
 }
 
 /* ============================================================
