@@ -214,22 +214,26 @@ p { color: var(--ink-soft); }
 .about__text p { margin-bottom: 18px; }
 .about__text .btn { margin-top: 8px; }
 
-.about__photo { position: relative; display: flex; justify-content: center; }
-.about__circle {
+.about__photo { position: relative; display: flex; justify-content: center; align-items: flex-start; }
+/* Soft rose arch peeking behind the photo */
+.about__archback {
   position: absolute;
-  width: 78%; aspect-ratio: 1;
-  right: 6%; top: -6%;
-  background: var(--rose-soft);
-  border-radius: 50%;
   z-index: 0;
+  width: 78%;
+  aspect-ratio: 9 / 16;
+  right: 4%; top: 5%;
+  background: var(--rose-soft);
+  border-radius: 999px 999px 14px 14px;
 }
-.ph--circle {
+/* Tall arch frame — shows the whole portrait, no cropping */
+.ph--portrait {
   position: relative; z-index: 1;
   width: 80%;
-  aspect-ratio: 1;
-  border-radius: 50%;
+  max-width: 360px;
+  aspect-ratio: 9 / 16;
+  border-radius: 999px 999px 14px 14px;
 }
-.ph--circle img { object-position: 50% 15%; }
+.ph--portrait img { object-fit: cover; }
 
 /* ============================================================
    3. FEATURED  (chocolate block)
