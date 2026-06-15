@@ -233,16 +233,10 @@ p { color: var(--ink-soft); }
 .about__text p { margin-bottom: 18px; }
 .about__text .btn { margin-top: 8px; }
 
-.about__photo { position: relative; display: flex; justify-content: center; align-items: flex-start; }
-/* Tall arch frame — shows the whole portrait, no cropping */
-.ph--portrait {
-  position: relative; z-index: 1;
-  width: 100%;
-  max-width: 270px;
-  aspect-ratio: 9 / 16;
-  border-radius: 999px 999px 14px 14px;
-}
-.ph--portrait img { object-fit: cover; }
+.about__photo { position: relative; display: flex; justify-content: center; }
+/* About photo inside a phone mockup (matches the portfolio reels) */
+.phone--about { max-width: 290px; }
+.phone--about .ph--reel img { object-position: 50% 18%; }
 
 /* ============================================================
    WHY UGC  (burgundy block)
