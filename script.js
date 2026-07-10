@@ -80,6 +80,9 @@ document.addEventListener("DOMContentLoaded", function () {
     videos.forEach(function (v) {
       vObserver.observe(v);
 
+      // Videos opted out of sound (e.g. the About showreel) get no toggle
+      if (v.hasAttribute("data-no-sound")) return;
+
       // Tap-to-unmute button (reels autoplay muted; click for sound)
       const btn = document.createElement("button");
       btn.className = "ph__sound";

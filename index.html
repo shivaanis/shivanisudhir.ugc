@@ -86,8 +86,9 @@
 
       <div class="about__photo">
         <div class="phone phone--about"><div class="ph ph--reel">
-          <img src="assets/images/about.jpg?v=3" alt="Shivani Sudhir"
-               onerror="this.remove(); this.parentNode.classList.add('empty')" />
+          <!-- About showreel: Floral styling, muted loop, no sound toggle -->
+          <video class="ph__video" data-no-sound muted loop playsinline preload="none"
+                 poster="assets/images/reel-2-poster.jpg" data-src="assets/videos/reel-2.mp4"></video>
         </div></div>
       </div>
     </div>
@@ -419,6 +420,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=2"></script>
 </body>
 </html>
