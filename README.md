@@ -46,7 +46,7 @@ shivanisudhir.ugc/
 4. Set **Branch** to `main` and folder to `/ (root)`, then click **Save**.
 5. Wait ~1 minute. Your site will be live at:
    ```
-   https://shivaanis.github.io/shivanisudhir.ugc/
+   https://ugc.shivanisudhir.xyz/
    ```
 
 > 💡 Make sure the file is named exactly `index.html` (lowercase) — GitHub Pages looks for it automatically.
